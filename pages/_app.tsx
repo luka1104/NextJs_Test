@@ -10,13 +10,15 @@ const App = ({ Component, pageProps }: AppProps) => {
   const client = createClient()
 
   return (
-    <WagmiProvider client={client}>
-      <ChakraProvider theme={theme}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ChakraProvider>
-    </WagmiProvider>
+    <>
+      <WagmiProvider client={client}>
+        <ChakraProvider theme={theme}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ChakraProvider>
+      </WagmiProvider>
+    </>
   );
 };
 
