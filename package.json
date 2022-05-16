@@ -10,11 +10,14 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@3rdweb/hooks": "^1.9.2",
+    "@3rdweb/react": "^1.9.3",
     "@chakra-ui/react": "^2.0.0-next.3",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@fontsource/josefin-sans": "^4.5.1",
     "@react-icons/all-files": "^4.1.0",
+    "ethers": "^5.6.6",
     "framer-motion": "^5.5.5",
     "gray-matter": "^4.0.3",
     "i18next": "^21.6.7",
@@ -26,7 +29,8 @@
     "react-dom": "^18.1.0",
     "react-i18next": "^11.15.3",
     "react-intersection-observer": "^8.33.1",
-    "react-use": "^17.3.2"
+    "react-use": "^17.3.2",
+    "wagmi": "^0.3.5"
   },
   "devDependencies": {
     "@types/node": "^17.0.31",
