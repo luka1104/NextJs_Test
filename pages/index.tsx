@@ -98,7 +98,9 @@ const IndexPage = () => {
               Connect Wallet
             </Button>
             {data && (
-              <Text>Connected To : {data.address}</Text>
+              <>
+                <Text>Connected To : {data.address}</Text>
+              </>
             )}
           </HStack>
         </VStack>
