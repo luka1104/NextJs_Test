@@ -97,6 +97,9 @@ const IndexPage = () => {
             >
               Connect Wallet
             </Button>
+            {data && (
+              <Text>Connected To : {data.address}</Text>
+            )}
           </HStack>
         </VStack>
         <Center w={{ base: '100%', md: '50%' }}>
