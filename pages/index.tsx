@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import ExternalLink from '@/components/external-link';
 import PageLayout from '@/components/page-layout';
 import {
@@ -17,22 +18,49 @@ import { FiExternalLink } from '@react-icons/all-files/fi/FiExternalLink';
 import { ImSphere } from '@react-icons/all-files/im/ImSphere';
 import { Trans, useTranslation } from 'react-i18next';
 import { GITHUB_PROFILE, WEBSITE } from 'src/constants';
-import { useAccount, useConnect, useDisconnect } from 'wagmi'
+import { chainId, useAccount, useConnect, useDisconnect, useNetwork } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 
 const IndexPage = () => {
+  const [address, setAddress] = useState('')
   const { t } = useTranslation();
   const { data } = useAccount()
   const { connect } = useConnect({
+    onConnect(data) {
+      setAddress(data.account);
+    },
     connector: new InjectedConnector(),
   })
   const { disconnect } = useDisconnect()
+
+  const {
+    activeChain,
+    chains,
+    error,
+    isLoading,
+    pendingChainId,
+    switchNetwork,
+  } = useNetwork({
+    chainId: 137
+  })
+ 
+  const switchChain = () => {
+    if (activeChain) {
+      console.log(activeChain.id);
+    }
+  }
+
+  // useEffect(() => {
+  //   switchChain()
+  // }, [address])
 
   return (
     <PageLayout
       title='Home'
       description='Discover a starter kit which includes Next.js, Chakra-UI, Framer-Motion in Typescript. You have few components, Internationalization, SEO and more in this template ! Enjoy coding.'
     >
+      {isLoading?"loading":
+      <>
       <Stack
         spacing={4}
         py={12}
@@ -118,7 +146,10 @@ const IndexPage = () => {
           />
         </Center>
       </Stack>
+      </>
+}
     </PageLayout>
+  
   );
 };
 
