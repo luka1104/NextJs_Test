@@ -72,31 +72,41 @@ const IndexPage = () => {
             w='full'
             justify={{ base: 'center', md: 'flex-start' }}
           >
-            <Link href={WEBSITE} isExternal>
+            {data ? (
               <Button
-                colorScheme='brand'
-                variant='ghost'
-                rightIcon={<ImSphere />}
-              >
-                Website
-              </Button>
-            </Link>
-            <Link href={GITHUB_PROFILE} isExternal>
-              <Button
-                colorScheme='brand'
-                variant='ghost'
-                rightIcon={<FiExternalLink />}
-              >
-                Github
-              </Button>
-            </Link>
-            <Button
-              onClick={() => connect()}
+              onClick={() => disconnect()}
               colorScheme='brand'
               variant='ghost'
             >
-              Connect Wallet
+              Disconnect Wallet
             </Button>
+            ) : (
+              <Button
+                onClick={() => connect()}
+                colorScheme='brand'
+                variant='ghost'
+              >
+                Connect Wallet
+              </Button>
+            )}
+            <Link href="https://metamask.app.link/dapp/next-js-test-luka.vercel.app/">
+              <Button
+                
+                colorScheme='brand'
+                variant='ghost'
+              >
+                Connect with MetaMask
+              </Button>
+            </Link>
+            {/* <Link href="https://metamask.app.link/dapp/next-js-test-luka.vercel.app/">
+              <Button
+                
+                colorScheme='brand'
+                variant='ghost'
+              >
+                Connect with Phantom
+              </Button>
+            </Link> */}
           </HStack>
         </VStack>
         <Center w={{ base: '100%', md: '50%' }}>
