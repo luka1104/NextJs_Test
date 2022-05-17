@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.hakkaofdev.fr
+
+# Sitemaps
+Sitemap: https://www.hakkaofdev.fr/sitemap.xml

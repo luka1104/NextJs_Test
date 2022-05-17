@@ -46,13 +46,17 @@ const IndexPage = () => {
  
   const switchChain = () => {
     if (activeChain) {
-      console.log(activeChain.id);
+      if (activeChain.id === 137) {
+        console.log(activeChain.name);
+      } else {
+        switchNetwork?.(137)
+      }
     }
   }
 
-  // useEffect(() => {
-  //   switchChain()
-  // }, [address])
+  useEffect(() => {
+    switchChain()
+  }, [address])
 
   return (
     <PageLayout
