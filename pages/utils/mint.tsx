@@ -44,3 +44,5 @@ export const mintNFT = async (address) => {
       console.log("Promise failed:", err)
     })
 };
+
+export default mintNFT;
