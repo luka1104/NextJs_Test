@@ -89,7 +89,7 @@ const IndexPage = () => {
       </Stack>
       </>
     </PageLayout>
-  
+
   );
 };
 
