@@ -20,12 +20,13 @@ import { Trans, useTranslation } from 'react-i18next';
 import { GITHUB_PROFILE, WEBSITE } from 'src/constants';
 import { useAccount, useConnect, useDisconnect, useNetwork } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
-import { mintNFT } from './utils/mint'
+import mintNFT  from './utils/mint'
 
 const IndexPage = () => {
   const [address, setAddress] = useState<string>('')
   const { t } = useTranslation();
   const { data } = useAccount()
+  const [reqMint,setReqMint]= useState<boolean>(false)
   const { connect } = useConnect({
     onConnect(data) {
       setAddress(data.account);
@@ -33,7 +34,9 @@ const IndexPage = () => {
     connector: new InjectedConnector(),
   })
   const { disconnect } = useDisconnect()
-
+  const mint =()=>{
+    mintNFT(address)
+  }
   const {
     activeChain,
     chains,
@@ -57,7 +60,7 @@ const IndexPage = () => {
 
   useEffect(() => {
     switchChain()
-  }, [address])
+  }, [address,reqMint])
 
   return (
     <PageLayout
@@ -107,7 +110,7 @@ const IndexPage = () => {
           >
             {data ? (
               <Button
-              onClick={() => mintNFT(address)}
+              onClick={() => mint()}
               colorScheme='brand'
               variant='ghost'
             >
