@@ -98,7 +98,7 @@ const IndexPage = () => {
       </Stack>
       </>
     </PageLayout>
-  
+
   );
 };
 

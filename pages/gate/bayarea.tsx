@@ -12,7 +12,7 @@ import {
   Skeleton,
   Stack,
   Text,
-  VStack,
+  VStack
 } from '@chakra-ui/react';
 
 const bayarea = ({ state }) => {
@@ -91,7 +91,9 @@ const bayarea = ({ state }) => {
                 w={{ base: '100%', md: '50%' }}
                 py={{ base: 20, md: 0 }}
               >
-                <Heading as='h1'>Sorry! You don't have a right to Access This Page! Scan The NFC Again!</Heading>
+                <Heading as='h1'>
+                  Sorry! You do not have a right to Access This Page! Scan The NFC Again!
+                </Heading>
               </VStack>
             </Stack>
             </>
