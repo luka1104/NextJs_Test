@@ -18,8 +18,6 @@ import { FiExternalLink } from '@react-icons/all-files/fi/FiExternalLink';
 import { ImSphere } from '@react-icons/all-files/im/ImSphere';
 import { Trans, useTranslation } from 'react-i18next';
 import { GITHUB_PROFILE, WEBSITE } from 'src/constants';
-import { useAccount, useConnect, useDisconnect, useNetwork } from 'wagmi'
-import { InjectedConnector } from 'wagmi/connectors/injected'
 
 const IndexPage = () => {
   const { t } = useTranslation();
