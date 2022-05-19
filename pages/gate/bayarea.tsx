@@ -5,7 +5,7 @@ const bayarea = ({ state }) => {
     <>
       {state === '1D:F9:39:B9:6E:00:00' ? (
         <div>
-          Authenticated!!
+          Welcome!!
         </div>
       ) : (
         <div>
