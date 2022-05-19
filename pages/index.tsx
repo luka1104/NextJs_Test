@@ -18,11 +18,12 @@ import { FiExternalLink } from '@react-icons/all-files/fi/FiExternalLink';
 import { ImSphere } from '@react-icons/all-files/im/ImSphere';
 import { Trans, useTranslation } from 'react-i18next';
 import { GITHUB_PROFILE, WEBSITE } from 'src/constants';
-import { chainId, useAccount, useConnect, useDisconnect, useNetwork } from 'wagmi'
+import { useAccount, useConnect, useDisconnect, useNetwork } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
+import { mintNFT } from './utils/mint'
 
 const IndexPage = () => {
-  const [address, setAddress] = useState('')
+  const [address, setAddress] = useState<string>('')
   const { t } = useTranslation();
   const { data } = useAccount()
   const { connect } = useConnect({
@@ -41,15 +42,15 @@ const IndexPage = () => {
     pendingChainId,
     switchNetwork,
   } = useNetwork({
-    chainId: 137
+    chainId: 80001
   })
  
   const switchChain = () => {
     if (activeChain) {
-      if (activeChain.id === 137) {
+      if (activeChain.id === 80001) {
         console.log(activeChain.name);
       } else {
-        switchNetwork?.(137)
+        switchNetwork?.(80001)
       }
     }
   }
@@ -106,11 +107,11 @@ const IndexPage = () => {
           >
             {data ? (
               <Button
-              onClick={() => disconnect()}
+              onClick={() => mintNFT(address)}
               colorScheme='brand'
               variant='ghost'
             >
-              Disconnect Wallet
+              Mint NFT
             </Button>
             ) : (
               <Button
