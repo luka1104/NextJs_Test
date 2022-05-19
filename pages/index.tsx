@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import ExternalLink from '@/components/external-link';
 import PageLayout from '@/components/page-layout';
 import {
@@ -17,6 +18,8 @@ import { FiExternalLink } from '@react-icons/all-files/fi/FiExternalLink';
 import { ImSphere } from '@react-icons/all-files/im/ImSphere';
 import { Trans, useTranslation } from 'react-i18next';
 import { GITHUB_PROFILE, WEBSITE } from 'src/constants';
+import { useAccount, useConnect, useDisconnect, useNetwork } from 'wagmi'
+import { InjectedConnector } from 'wagmi/connectors/injected'
 
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -26,6 +29,7 @@ const IndexPage = () => {
       title='Home'
       description='Discover a starter kit which includes Next.js, Chakra-UI, Framer-Motion in Typescript. You have few components, Internationalization, SEO and more in this template ! Enjoy coding.'
     >
+      <>
       <Stack
         spacing={4}
         py={12}
@@ -65,24 +69,24 @@ const IndexPage = () => {
             w='full'
             justify={{ base: 'center', md: 'flex-start' }}
           >
-            <Link href={WEBSITE} isExternal>
+            <Link href="https://metamask.app.link/dapp/next-js-test-luka.vercel.app/">
               <Button
+                
                 colorScheme='brand'
                 variant='ghost'
-                rightIcon={<ImSphere />}
               >
-                Website
+                Connect with MetaMask
               </Button>
             </Link>
-            <Link href={GITHUB_PROFILE} isExternal>
+            {/* <Link href="https://metamask.app.link/dapp/next-js-test-luka.vercel.app/">
               <Button
+                
                 colorScheme='brand'
                 variant='ghost'
-                rightIcon={<FiExternalLink />}
               >
-                Github
+                Connect with Phantom
               </Button>
-            </Link>
+            </Link> */}
           </HStack>
         </VStack>
         <Center w={{ base: '100%', md: '50%' }}>
@@ -94,7 +98,9 @@ const IndexPage = () => {
           />
         </Center>
       </Stack>
+      </>
     </PageLayout>
+  
   );
 };
 
