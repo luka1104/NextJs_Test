@@ -76,15 +76,6 @@ const IndexPage = () => {
                 Connect with MetaMask
               </Button>
             </Link>
-            {/* <Link href="https://metamask.app.link/dapp/next-js-test-luka.vercel.app/">
-              <Button
-                
-                colorScheme='brand'
-                variant='ghost'
-              >
-                Connect with Phantom
-              </Button>
-            </Link> */}
           </HStack>
         </VStack>
         <Center w={{ base: '100%', md: '50%' }}>
