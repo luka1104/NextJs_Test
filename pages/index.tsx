@@ -13,12 +13,13 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 
 const IndexPage = () => {
+  const [minting, setMintig] = useState<boolean>(false);
   const { t } = useTranslation();
-
+  // const mint = MintNFT(address, minting);
   return (
     <PageLayout
       title='Home'
@@ -65,7 +66,13 @@ const IndexPage = () => {
               justify={{ base: 'center', md: 'flex-start' }}
             >
               <Link href='https://metamask.app.link/dapp/next-js-test-luka.vercel.app/'>
-                <Button colorScheme='brand' variant='ghost'>
+                <Button
+                  colorScheme='brand'
+                  variant='ghost'
+                  // onClick={() => {
+                  //   setMintig(true);
+                  // }}
+                >
                   Connect with MetaMask
                 </Button>
               </Link>
