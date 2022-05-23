@@ -1,34 +1,70 @@
 import React from 'react'
-import Discord from 'discord.js'
+import axios from 'axios'
+import { useRouter } from 'next/router'
 
-const DiscordBayarea = ({ state }) => {
-  const client = new Discord.Client();
-  const guildId = '973745161173606451'; //First param from discord web
-  const channelId = '974089419533467728'; //Second param from discord web
-  const getInviteLink = async () => {
-    const p = new Promise((resolve, reject)=>{
-      client.on('ready', async () => {
-        try {
-        const guild = await client.guilds.fetch(guildId);
-        const channel = await guild.channels.cache.get(channelId);
-        const invite = await channel.createInvite({
-          maxUses: 1
-        });
-        resolve(`https://discord.gg/${invite.code}`);
-        } catch(e){
-        reject(e);
-        }
-      });
-      client.login('OTc2OTc3Nzg4NTAwMzE2MTgy.Go_uoB.59r24jITF5qaYyEW78Y8r-Uj2O0q31KujSmWBE')
-    });
-    return p;
+const queryString = require('querystring')
+const DiscordBayarea = () => {
+  const router = useRouter()
+  const code = router.query.code
+
+  const addToGuild = async (resp, res) => {
+    const access_token = resp.data.access_token
+    const user_id = res.data.id
+    router.push('https://discord.com/channels/973745161173606451/974089419533467728')
+    fetch(`/api/discord?userid=${user_id}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(access_token),
+    })
   }
-  getInviteLink().then(link => console.log(`${link}`))
-  console.log(state);
+
+  const getUserInfo = (resp) => {
+    const config = {
+      headers: {
+        'authorization': `Bearer ${resp.data.access_token}`
+      } 
+    }
+    axios.get(`https://discord.com/api/users/@me`, config)
+    .then(res => {
+      addToGuild(resp, res)
+      // console.log(res);
+    })
+    .catch(e => {
+      console.log(e);
+    })
+  }
+
+  const getToken = () => {
+    const data = {
+      'client_id': process.env.DISCORD_CLIENT,
+      'client_secret': process.env.DISCORD_SECRET,
+      'code': code,
+      'grant_type': 'authorization_code',
+      'redirect_uri': 'http://localhost:3000/discord/bayarea',
+      'scopes': 'identify email connections guilds.join'
+    }
+    const config = {
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded'
+      }
+    }
+    axios.post(`https://discord.com/api/oauth2/token`, queryString.stringify(data), config)
+    .then(resp => {
+      getUserInfo(resp)
+      // console.log('getToken:',resp)
+    })
+    .catch(e => {
+      console.log(e);
+    })
+  }
+
+  if(code) {
+    getToken();
+  }
   return (
     <div>
-      {state}
-      Discord!!
     </div>
   )
 }

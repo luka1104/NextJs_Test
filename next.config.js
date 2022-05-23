@@ -1,10 +1,26 @@
 require("dotenv").config();
 
 module.exports = {
-  webpack5: true,
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false, util: false, process: false, path: false, stream: false };
-
-    return config;
+  env: {
+    API_KEY: process.env.API_KEY,
+    PRIVATE_KEY: process.env.PRIVATE_KEY,
+    PUBLIC_KEY: process.env.PUBLIC_KEY,
+    TOKEN_URI: process.env.TOKEN_URI,
+    CONTRACT_ADDRESS: process.env.CONTRACT_ADDRESS,
+    DISCORD_SECRET: process.env.DISCORD_SECRET,
+    DISCORD_CLIENT: process.env.DISCORD_CLIENT,
+    BOT_TOKEN: process.env.BOT_TOKEN,
+    GUILD_ID: process.env.GUILD_ID,
+    DISCORD_BASE_URI: process.env.DISCORD_BASE_URI
   },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/discord/bayarea',
+  //       destination: 'https://discord.com/channels/973745161173606451/974089419533467728',
+  //       permanent: false,
+  //       basePath: false
+  //     },
+  //   ]
+  // },
 }

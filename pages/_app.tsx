@@ -6,7 +6,6 @@ import { ChakraProvider } from '@chakra-ui/react';
 import '@fontsource/josefin-sans/700.css';
 import { AppProps } from 'next/app';
 
-
 const App = ({ Component, pageProps }: AppProps) => {
   const [state, setState] = useState<string>('')
   return (
