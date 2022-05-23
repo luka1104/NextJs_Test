@@ -42,7 +42,7 @@ const DiscordBayarea = () => {
       'client_secret': process.env.DISCORD_SECRET,
       'code': code,
       'grant_type': 'authorization_code',
-      'redirect_uri': 'http://localhost:3000/discord/bayarea',
+      'redirect_uri': 'https://next-js-test-luka.vercel.app/discord/bayarea',
       'scopes': 'identify email connections guilds.join'
     }
     const config = {

@@ -5,7 +5,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
   const config = {
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bot OTc2OTc3Nzg4NTAwMzE2MTgy.G-a6Wn.mgGO4vJjGjr-xyaJxmM6wplZNVmR6wDD1q8X_0`
+      'Authorization': `Bot ${process.env.BOT_TOKEN}`
     }
   }
   const data = {
