@@ -13,14 +13,4 @@ module.exports = {
     GUILD_ID: process.env.GUILD_ID,
     DISCORD_BASE_URI: process.env.DISCORD_BASE_URI
   },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/discord/bayarea',
-  //       destination: 'https://discord.com/channels/973745161173606451/974089419533467728',
-  //       permanent: false,
-  //       basePath: false
-  //     },
-  //   ]
-  // },
 }

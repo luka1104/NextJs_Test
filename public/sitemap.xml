@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://www.hakkaofdev.fr</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-05-19T23:03:21.570Z</lastmod></url>
-<url><loc>https://www.hakkaofdev.fr/gate/bayarea</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-05-19T23:03:21.570Z</lastmod></url>
-<url><loc>https://www.hakkaofdev.fr/nfc/1D:F9:39:B9:6E:00:00</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-05-19T23:03:21.570Z</lastmod></url>
+<url><loc>https://www.hakkaofdev.fr</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-05-23T21:25:52.315Z</lastmod></url>
+<url><loc>https://www.hakkaofdev.fr/discord/bayarea</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-05-23T21:25:52.315Z</lastmod></url>
+<url><loc>https://www.hakkaofdev.fr/gate/bayarea</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-05-23T21:25:52.315Z</lastmod></url>
+<url><loc>https://www.hakkaofdev.fr/nfc/1D:F9:39:B9:6E:00:00</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-05-23T21:25:52.315Z</lastmod></url>
+<url><loc>https://www.hakkaofdev.fr/utils/MintNFT</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-05-23T21:25:52.315Z</lastmod></url>
 </urlset>
