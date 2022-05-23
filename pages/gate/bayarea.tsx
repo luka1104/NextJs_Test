@@ -16,6 +16,7 @@ import {
 } from '@chakra-ui/react';
 
 const bayarea = ({ state }) => {
+
   return (
     <>
       {state === '1D:F9:39:B9:6E:00:00' ? (
@@ -48,9 +49,9 @@ const bayarea = ({ state }) => {
                 w='full'
                 justify={{ base: 'center', md: 'flex-start' }}
               >
-                <Link href="https://discord.com/api/oauth2/authorize?client_id=976977788500316182&redirect_uri=https%3A%2F%2Fdiscord.gg%2Fp79RBa2m&response_type=code&scope=identify%20email">
+                {/* <Link href="https://discord.com/api/oauth2/authorize?client_id=976977788500316182&redirect_uri=https%3A%2F%2Fdiscord.gg%2Fp79RBa2m&response_type=code&scope=identify%20email"> */}
+                <Link href="https://discord.com/api/oauth2/authorize?client_id=976977788500316182&redirect_uri=https%3A%2F%2Fnext-js-test-luka.vercel.app%2Fdiscord%2Fbayarea&response_type=code&scope=identify%20email%20connections%20guilds.join" rel="noopener noreferrer">
                   <Button
-                    
                     colorScheme='brand'
                     variant='ghost'
                   >
