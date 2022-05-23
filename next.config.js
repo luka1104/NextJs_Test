@@ -10,7 +10,6 @@ module.exports = {
     DISCORD_SECRET: process.env.DISCORD_SECRET,
     DISCORD_CLIENT: process.env.DISCORD_CLIENT,
     BOT_TOKEN: process.env.BOT_TOKEN,
-    GUILD_ID: process.env.GUILD_ID,
-    DISCORD_BASE_URI: process.env.DISCORD_BASE_URI
+    GUILD_ID: process.env.GUILD_ID
   },
 }

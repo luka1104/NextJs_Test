@@ -12,7 +12,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
     'access_token': req.body,
     'roles': ['976723312870838272']
   }
-  axios.put(`https://discord.com/api/guilds/973745161173606451/members/${req.query.userid}`, data, config)
+  axios.put(`https://discord.com/api/guilds/${process.env.GUILD_ID}/members/${req.query.userid}`, data, config)
   .then(resp => {
     if (resp.status === 201) {
       console.log(`Response: ${resp.status}`);
