@@ -14,6 +14,9 @@ import {
   Text,
   VStack
 } from '@chakra-ui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
 
 const bayarea = ({ state }) => {
 
@@ -21,12 +24,12 @@ const bayarea = ({ state }) => {
     <>
       {state === '1D:F9:39:B9:6E:00:00' ? (
         <PageLayout
-          title='Home'
-          description='Discover a starter kit which includes Next.js, Chakra-UI, Framer-Motion in Typescript. You have few components, Internationalization, SEO and more in this template ! Enjoy coding.'
+          title='Gateway'
+          description=''
         >
           <>
           <Stack
-            spacing={4}
+            spacing={1}
             py={12}
             align='center'
             h='100vh'
@@ -34,48 +37,62 @@ const bayarea = ({ state }) => {
             direction={{ base: 'column', md: 'row' }}
           >
             <VStack
-              spacing={2}
+              spacing={4}
               align='start'
               w={{ base: '100%', md: '50%' }}
-              py={{ base: 20, md: 0 }}
+              py={{ base: 0, md: 0 }}
             >
-              <Heading as='h1'>DeStore Bayarea</Heading>
+              <Image
+                src='/assets/images/Logo.png'
+                h={50}
+                fit='cover'
+                fallback={<Skeleton w={{ base: '100%', md: '50%' }} h={50} />}
+              />
+              <Heading as='h1' paddingLeft='60%'>
+                Bayarea
+              </Heading>
               <Divider />
-              <Text color='gray.500' align='justify'>
-                  <strong>Join our Exclusive NFT Gated Discord Community!!</strong>
-              </Text>
+              <Heading color='black' fontSize='16px'>
+                  test description test is test test A test B Test C Testing now Test Description Test Test Testing AAA aaaa aaa a a aaaaaaaa Join our Exclusive NFT Gated Discord Community!! 
+              </Heading>
               <HStack
                 spacing={4}
                 w='full'
                 justify={{ base: 'center', md: 'flex-start' }}
               >
-                {/* <Link href="https://discord.com/api/oauth2/authorize?client_id=976977788500316182&redirect_uri=https%3A%2F%2Fnext-js-test-luka.vercel.app%2Fdiscord%2Fbayarea&response_type=code&scope=identify%20email%20connections%20guilds.join"> */}
-                <Link href="https://discord.com/api/oauth2/authorize?client_id=978499281294090270&redirect_uri=https%3A%2F%2Fnext-js-test-luka.vercel.app%2Fdiscord%2Fbayarea&response_type=code&scope=identify%20email%20connections%20guilds.join" rel="noopener noreferrer">
-                  <Button
-                    colorScheme='brand'
-                    variant='ghost'
-                  >
-                    Join our Discord and Claim your NFT!
-                  </Button>
-                </Link>
               </HStack>
             </VStack>
             <Center w={{ base: '100%', md: '50%' }}>
               <Image
-                src='/assets/images/home.jpg'
-                h={500}
+                src='/assets/images/rainbow_key.png'
+                h={300}
                 fit='cover'
-                fallback={<Skeleton w={{ base: '100%', md: '50%' }} h={500} />}
+                fallback={<Skeleton w={{ base: '100%', md: '50%' }} h={300} />}
               />
             </Center>
+            <Heading color='black' paddingBottom='10px' fontSize='20px'>
+              Tap to Join our Discord!
+            </Heading>
+            <FontAwesomeIcon fontSize='30px' opacity='0.7' icon={faAngleDoubleDown} />
+            {/* <Link href="https://discord.com/api/oauth2/authorize?client_id=976977788500316182&redirect_uri=https%3A%2F%2Fnext-js-test-luka.vercel.app%2Fdiscord%2Fbayarea&response_type=code&scope=identify%20email%20connections%20guilds.join"> */}
+            <Link href="https://discord.com/api/oauth2/authorize?client_id=978499281294090270&redirect_uri=https%3A%2F%2Fnext-js-test-luka.vercel.app%2Fdiscord%2Fbayarea&response_type=code&scope=identify%20email%20connections%20guilds.join" rel="noopener noreferrer">
+              <Button
+                paddingTop='30px'
+                color='#7289da'
+                variant='ghost'
+                fontSize='40px'
+              >
+                <FontAwesomeIcon icon={faDiscord} />
+              </Button>
+            </Link>
           </Stack>
           </>
         </PageLayout>
       ) : (
         <div>
           <PageLayout
-            title='Home'
-            description='Discover a starter kit which includes Next.js, Chakra-UI, Framer-Motion in Typescript. You have few components, Internationalization, SEO and more in this template ! Enjoy coding.'
+            title='Gateway'
+            description=''
           >
             <>
             <Stack
@@ -93,7 +110,7 @@ const bayarea = ({ state }) => {
                 py={{ base: 20, md: 0 }}
               >
                 <Heading as='h1'>
-                  Sorry! You do not have a right to Access This Page! Scan The NFC Again!
+                  Sorry! You do not have a right to Access This Page! Tap The NFC Card Again!
                 </Heading>
               </VStack>
             </Stack>
