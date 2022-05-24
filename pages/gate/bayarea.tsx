@@ -16,7 +16,8 @@ import {
 } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
-import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
+import "@fontsource/dm-sans";
 
 const bayarea = ({ state }) => {
 
@@ -43,16 +44,13 @@ const bayarea = ({ state }) => {
               py={{ base: 0, md: 0 }}
             >
               <Image
-                src='/assets/images/Logo.png'
-                h={50}
+                src='/assets/images/STORE_0_logo.svg'
+                h={51}
                 fit='cover'
                 fallback={<Skeleton w={{ base: '100%', md: '50%' }} h={50} />}
               />
-              <Heading as='h1' paddingLeft='60%'>
-                Bayarea
-              </Heading>
               <Divider />
-              <Heading color='black' fontSize='16px'>
+              <Heading color='black' fontSize='16px' fontFamily='Dm Sans'>
                   test description test is test test A test B Test C Testing now Test Description Test Test Testing AAA aaaa aaa a a aaaaaaaa Join our Exclusive NFT Gated Discord Community!! 
               </Heading>
               <HStack
@@ -70,7 +68,7 @@ const bayarea = ({ state }) => {
                 fallback={<Skeleton w={{ base: '100%', md: '50%' }} h={300} />}
               />
             </Center>
-            <Heading color='black' paddingBottom='10px' fontSize='20px'>
+            <Heading color='black' paddingBottom='10px' fontSize='20px' fontFamily='Dm Sans'>
               Tap to Join our Discord!
             </Heading>
             <FontAwesomeIcon fontSize='30px' opacity='0.7' icon={faAngleDoubleDown} />
@@ -122,7 +120,7 @@ const bayarea = ({ state }) => {
                 w={{ base: '100%', md: '50%' }}
                 py={{ base: 20, md: 0 }}
               >
-                <Heading as='h1'>
+                <Heading as='h1' fontFamily='Dm Sans'>
                   Sorry! You do not have a right to Access This Page! Tap The NFC Card Again!
                 </Heading>
               </VStack>
