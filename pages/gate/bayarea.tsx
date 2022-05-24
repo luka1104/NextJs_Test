@@ -43,7 +43,7 @@ const bayarea = ({ state }) => {
               py={{ base: 0, md: 0 }}
             >
               <Image
-                src='/assets/images/logo.png'
+                src='/assets/images/Logo.png'
                 h={50}
                 fit='cover'
                 fallback={<Skeleton w={{ base: '100%', md: '50%' }} h={50} />}
