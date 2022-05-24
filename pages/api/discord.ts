@@ -10,7 +10,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
   }
   const data = {
     'access_token': req.body,
-    'roles': ['976723312870838272']
+    'roles': [process.env.ROLE_ID]
   }
   axios.put(`https://discord.com/api/guilds/${process.env.GUILD_ID}/members/${req.query.userid}`, data, config)
   .then(resp => {
