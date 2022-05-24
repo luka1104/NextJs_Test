@@ -10,7 +10,7 @@ const DiscordBayarea = () => {
   const addToGuild = async (resp, res) => {
     const access_token = resp.data.access_token
     const user_id = res.data.id
-    router.push('https://discordapp.com/channels/973745161173606451/974089419533467728')
+    router.push(`https://discordapp.com/channels/${process.env.GUILD_ID}/${process.env.CHANNEL_ID}`)
     fetch(`/api/discord?userid=${user_id}`, {
       method: 'POST',
       headers: {

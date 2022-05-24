@@ -11,6 +11,7 @@ module.exports = {
     DISCORD_CLIENT: process.env.DISCORD_CLIENT,
     BOT_TOKEN: process.env.BOT_TOKEN,
     GUILD_ID: process.env.GUILD_ID,
-    DISCORD_BASE_URI: process.env.DISCORD_BASE_URI
+    ROLE_ID: process.env.ROLE_ID,
+    CHANNEL_ID: process.env.CHANNEL_ID
   },
 }
