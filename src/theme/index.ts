@@ -25,7 +25,7 @@ const colors = {
 };
 
 const fonts = {
-  heading: `Josefin Sans, ${base.fonts.heading}`,
+  heading: `ABCWhyteInktrap-Regular, Josefin Sans, ${base.fonts.heading}`,
 };
 
 const components = {
