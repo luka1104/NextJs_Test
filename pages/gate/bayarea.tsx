@@ -19,7 +19,7 @@ import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import "@fontsource/dm-sans";
 
-const bayarea = ({ state }) => {
+const Bayarea = ({ state }) => {
   const [link, setLink] = useState('/nfc/wqx72dbds3tnqnft')
   return (
     <>
@@ -166,4 +166,4 @@ const bayarea = ({ state }) => {
   )
 }
 
-export default bayarea
+export default Bayarea
