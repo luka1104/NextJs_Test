@@ -85,7 +85,7 @@ const bayarea = ({ state }) => {
                 </Button>
               </Link>
             ) : (
-              <Link href="https://discord.gg/MuTHNCrY" rel="noopener noreferrer">
+              <Link href="/nfc/wqx72dbds3tnqnft" rel="noopener noreferrer">
                 <Button
                   paddingTop='30px'
                   color='#7289da'
