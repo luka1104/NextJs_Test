@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-const redirect = () => {
+const Redirect = () => {
   const router = useRouter()
   useEffect(() => {
     router.push('https://discord.gg/MuTHNCrY')
@@ -13,4 +13,4 @@ const redirect = () => {
   )
 }
 
-export default redirect
+export default Redirect
