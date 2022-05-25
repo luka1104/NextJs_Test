@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 
 const Redirect = () => {
-  const router = useRouter()
-  useEffect(() => {
-    router.push('https://discord.gg/MuTHNCrY')
-  }, [])
+  // const router = useRouter()
+  // useEffect(() => {
+  //   router.push('https://discord.gg/MuTHNCrY')
+  // }, [])
   return (
     <div>
       

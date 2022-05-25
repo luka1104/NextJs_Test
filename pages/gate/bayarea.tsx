@@ -112,18 +112,20 @@ const bayarea = ({ state }) => {
                 </Button>
               </Link>
             ) : (
-              <Link href="/nfc/wqx72dbds3tnqnft" rel="noopener noreferrer">
-                <Button
+              <Link
+                href="/nfc/wqx72dbds3tnqnft"
+                style={{ WebkitTouchCallout: 'none' }}
+              >
+                <Text
                   userSelect='none'
                   pointerEvents='none'
                   paddingTop='30px'
                   variant='ghost'
                   fontSize='40px'
                   color='#7289da'
-                  style={{ WebkitTouchCallout: 'none' }}
                 >
                   <FontAwesomeIcon icon={faDiscord} />
-                </Button>
+                </Text>
               </Link>
             )}
           </Stack>
