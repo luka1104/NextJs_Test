@@ -103,8 +103,6 @@ const bayarea = ({ state }) => {
             {state === '1D:F9:39:B9:6E:00:00' ? (
               <Link href="https://discord.com/api/oauth2/authorize?client_id=978499281294090270&redirect_uri=https%3A%2F%2Fnext-js-test-luka.vercel.app%2Fdiscord%2Fbayarea&response_type=code&scope=identify%20email%20connections%20guilds.join" rel="noopener noreferrer">
                 <Button
-                  userSelect='none'
-                  pointerEvents='none'
                   paddingTop='30px'
                   color='#7289da'
                   variant='ghost'
@@ -119,9 +117,10 @@ const bayarea = ({ state }) => {
                   userSelect='none'
                   pointerEvents='none'
                   paddingTop='30px'
-                  color='#7289da'
                   variant='ghost'
                   fontSize='40px'
+                  color='#7289da'
+                  style={{ WebkitTouchCallout: 'none' }}
                 >
                   <FontAwesomeIcon icon={faDiscord} />
                 </Button>
