@@ -14,13 +14,13 @@ module.exports = {
     ROLE_ID: process.env.ROLE_ID,
     CHANNEL_ID: process.env.CHANNEL_ID
   },
-  async redirects() {
-    return [
-      {
-        source: '/nfc/wqx72dbds3tnqnft',
-        destination: 'https://discord.gg/MuTHNCrY',
-        permanent: false,
-      },
-    ]
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/nfc/wqx72dbds3tnqnft',
+  //       destination: 'https://discord.gg/MuTHNCrY',
+  //       permanent: false,
+  //     },
+  //   ]
+  // },
 }
