@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ExternalLink from '@/components/external-link';
 import PageLayout from '@/components/page-layout';
 import {
@@ -20,7 +20,7 @@ import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import "@fontsource/dm-sans";
 
 const bayarea = ({ state }) => {
-
+  const [link, setLink] = useState('/nfc/wqx72dbds3tnqnft')
   return (
     <>
       {state ? (
@@ -112,8 +112,9 @@ const bayarea = ({ state }) => {
                 </Button>
               </Link>
             ) : (
-              <Link href="/nfc/wqx72dbds3tnqnft">
+              <Link href={link}>
                 <Button
+                  onDragStart={() => {setLink('/')}}
                   userSelect='none'
                   pointerEvents='none'
                   paddingTop='30px'
