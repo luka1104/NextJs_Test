@@ -18,9 +18,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import "@fontsource/dm-sans";
+import Router, { useRouter } from 'next/router'
 
 const Bayarea = ({ state }) => {
   const [link, setLink] = useState('/nfc/wqx72dbds3tnqnft')
+  const router = useRouter()
+  const handleClick = () => {
+   router.push('/nfc/wqx72dbds3tnqnft')
+  }
   return (
     <>
       {state ? (
@@ -114,7 +119,7 @@ const Bayarea = ({ state }) => {
             ) : (
               <Link href={link}>
                 <Button
-                  onDragEnter={() => {setLink('/')}}
+                  onMouseDown={handleClick}
                   // onClick={() => {setLink('/nfc/wqx72dbds3tnqnft')}}
                   userSelect='none'
                   pointerEvents='none'
