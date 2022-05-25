@@ -114,7 +114,7 @@ const Bayarea = ({ state }) => {
             ) : (
               <Link href={link}>
                 <Button
-                  onDrop={() => {setLink('/')}}
+                  onDragStartCapture={() => {setLink('/')}}
                   // onClick={() => {setLink('/nfc/wqx72dbds3tnqnft')}}
                   userSelect='none'
                   pointerEvents='none'
