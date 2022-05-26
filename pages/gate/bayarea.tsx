@@ -18,14 +18,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import "@fontsource/dm-sans";
-import Router, { useRouter } from 'next/router'
 
 const Bayarea = ({ state }) => {
-  const [link, setLink] = useState('/nfc/wqx72dbds3tnqnft')
-  const router = useRouter()
-  const handleClick = () => {
-   router.push('/nfc/wqx72dbds3tnqnft')
-  }
   return (
     <>
       {state ? (
@@ -105,33 +99,16 @@ const Bayarea = ({ state }) => {
             </Center>
             <FontAwesomeIcon fontSize='30px' opacity='0.7' icon={faAngleDoubleDown} />
             {/* <Link href="https://discord.com/api/oauth2/authorize?client_id=976977788500316182&redirect_uri=https%3A%2F%2Fnext-js-test-luka.vercel.app%2Fdiscord%2Fbayarea&response_type=code&scope=identify%20email%20connections%20guilds.join"> */}
-            {state === '1D:F9:39:B9:6E:00:00' ? (
-              <Link href="https://discord.com/api/oauth2/authorize?client_id=978499281294090270&redirect_uri=https%3A%2F%2Fnext-js-test-luka.vercel.app%2Fdiscord%2Fbayarea&response_type=code&scope=identify%20email%20connections%20guilds.join" rel="noopener noreferrer">
-                <Button
-                  paddingTop='30px'
-                  color='#7289da'
-                  variant='ghost'
-                  fontSize='40px'
-                >
-                  <FontAwesomeIcon icon={faDiscord} />
-                </Button>
-              </Link>
-            ) : (
-              <Link href={link}>
-                <Button
-                  onMouseDown={handleClick}
-                  // onClick={() => {setLink('/nfc/wqx72dbds3tnqnft')}}
-                  userSelect='none'
-                  pointerEvents='none'
-                  paddingTop='30px'
-                  variant='ghost'
-                  fontSize='40px'
-                  color='#7289da'
-                >
-                  <FontAwesomeIcon icon={faDiscord} />
-                </Button>
-              </Link>
-            )}
+            <Link href="https://discord.com/api/oauth2/authorize?client_id=978499281294090270&redirect_uri=https%3A%2F%2Fnext-js-test-luka.vercel.app%2Fdiscord%2Fbayarea&response_type=code&scope=identify%20email%20connections%20guilds.join" rel="noopener noreferrer">
+              <Button
+                paddingTop='30px'
+                color='#7289da'
+                variant='ghost'
+                fontSize='40px'
+              >
+                <FontAwesomeIcon icon={faDiscord} />
+              </Button>
+            </Link>
           </Stack>
           </>
         </PageLayout>

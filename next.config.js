@@ -16,11 +16,6 @@ module.exports = {
   },
   async redirects() {
     return [
-      // {
-      //   source: '/nfc/wqx72dbds3tnqnft',
-      //   destination: 'https://discord.gg/MuTHNCrY',
-      //   permanent: false,
-      // },
       {
         source: '/',
         destination: '/gate/bayarea',
